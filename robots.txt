@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://vlad1710.github.io/sitemap.xml
