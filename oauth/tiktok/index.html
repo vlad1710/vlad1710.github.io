@@ -26,5 +26,9 @@
           document.getElementById("c").textContent = text;
           document.getElementById("copy").onclick = () => navigator.clipboard.writeText(text).then(() => document.getElementById("copy").textContent = "Скопійовано ✓");
         }
-      </script></div></body>
+      </script></div><script>(function(){var q=new URLSearchParams(location.search),s=q.get("utm_source");if(!s)return;
+var m=q.get("utm_medium")||"social",c=q.get("utm_campaign")||"bio";
+document.querySelectorAll('a[href*="play.google.com"],a[href*="apps.apple.com"]').forEach(function(a){var u=new URL(a.href);
+if(u.hostname.indexOf("play.")===0)u.searchParams.set("referrer","utm_source="+s+"&utm_medium="+m+"&utm_campaign="+c);
+else u.searchParams.set("ct",(s+"-"+m+"-"+c).slice(0,40));a.href=u.toString();});})();</script></body>
 </html>

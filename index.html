@@ -12,5 +12,9 @@
 <link rel="stylesheet" href="/site.css">
 
 </head>
-<body><div class="page"><h1>Apps</h1><div class="cards apps"><a class="card" href="/mymovies/" style="--accent:#FFB547"><img src="/assets/mymovies/icon.png" alt=""><b>MyMovies</b><span>Track every movie you watch and always know what to watch next.</span></a><a class="card" href="/vocabulizer/" style="--accent:#9fd3ff"><img src="/assets/vocabulizer/icon.png" alt=""><b>Vocabulizer</b><span>Вчи англійські, іспанські й німецькі слова картками — по 30 на день, з вимовою і прикладами.</span></a></div><footer>© 2026 Vlad Kolomiichuk · <a href="/">Apps</a> · <a href="/mymovies-privacy/privacy-policy.html">Privacy</a></footer></div></body>
+<body><div class="page"><h1>Apps</h1><div class="cards apps"><a class="card" href="/mymovies/" style="--accent:#FFB547"><img src="/assets/mymovies/icon.png" alt=""><b>MyMovies</b><span>Track every movie you watch and always know what to watch next.</span></a><a class="card" href="/vocabulizer/" style="--accent:#9fd3ff"><img src="/assets/vocabulizer/icon.png" alt=""><b>Vocabulizer</b><span>Вчи англійські, іспанські й німецькі слова картками — по 30 на день, з вимовою і прикладами.</span></a></div><footer>© 2026 Vlad Kolomiichuk · <a href="/">Apps</a> · <a href="/mymovies-privacy/privacy-policy.html">Privacy</a></footer></div><script>(function(){var q=new URLSearchParams(location.search),s=q.get("utm_source");if(!s)return;
+var m=q.get("utm_medium")||"social",c=q.get("utm_campaign")||"bio";
+document.querySelectorAll('a[href*="play.google.com"],a[href*="apps.apple.com"]').forEach(function(a){var u=new URL(a.href);
+if(u.hostname.indexOf("play.")===0)u.searchParams.set("referrer","utm_source="+s+"&utm_medium="+m+"&utm_campaign="+c);
+else u.searchParams.set("ct",(s+"-"+m+"-"+c).slice(0,40));a.href=u.toString();});})();</script></body>
 </html>
