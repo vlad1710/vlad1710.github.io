@@ -12,6 +12,19 @@
 <link rel="stylesheet" href="/site.css">
 
 </head>
-<body><div class="page"><p>Returning to Promo Agent…</p>
-      <script>location.replace("http://localhost:4321/oauth/tiktok" + location.search);</script></div></body>
+<body><div class="page legal"><h1>TikTok</h1><div id="box"></div>
+      <script>
+        const q = new URLSearchParams(location.search), code = q.get("code"), app = q.get("state") || "";
+        const box = document.getElementById("box");
+        if (!code) box.innerHTML = "<p>TikTok did not return a code: " + (q.get("error_description") || q.get("error") || "unknown error") + "</p>";
+        else if (!/Android|iPhone|iPad|Mobile/i.test(navigator.userAgent)) location.replace("http://localhost:4321/oauth/tiktok" + location.search);
+        else {
+          const text = app + " " + code;
+          box.innerHTML = "<p>Скопіюй цей рядок і встав у промо-агенті: Підключення → TikTok → «Вставити код».</p>" +
+            "<p style='word-break:break-all;font:16px monospace;background:#222;padding:12px;border-radius:10px' id='c'></p>" +
+            "<p><button class='store' id='copy'>Скопіювати</button></p><p style='color:#a9abbd'>Код діє кілька хвилин.</p>";
+          document.getElementById("c").textContent = text;
+          document.getElementById("copy").onclick = () => navigator.clipboard.writeText(text).then(() => document.getElementById("copy").textContent = "Скопійовано ✓");
+        }
+      </script></div></body>
 </html>
