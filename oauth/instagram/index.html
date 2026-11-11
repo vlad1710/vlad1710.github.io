@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Connecting Instagram…</title>
+<meta name="description" content="Returning to Promo Agent.">
+<link rel="canonical" href="https://vlad1710.github.io/oauth/instagram/">
+<meta property="og:title" content="Connecting Instagram…">
+<meta property="og:description" content="Returning to Promo Agent.">
+<meta property="og:url" content="https://vlad1710.github.io/oauth/instagram/">
+<link rel="stylesheet" href="/site.css">
+
+</head>
+<body><div class="page legal"><h1>Instagram</h1><div id="box"></div>
+      <script>
+        const q = new URLSearchParams(location.search);
+        if (q.get("code")) location.replace("http://localhost:4321/oauth/instagram" + location.search);
+        else document.getElementById("box").textContent = "Instagram did not return a code: " + (q.get("error_description") || q.get("error") || "unknown error");
+      </script></div><script>(function(){var q=new URLSearchParams(location.search),s=q.get("utm_source");if(!s)return;
+var m=q.get("utm_medium")||"social",c=q.get("utm_campaign")||"bio";
+document.querySelectorAll('a[href*="play.google.com"],a[href*="apps.apple.com"]').forEach(function(a){var u=new URL(a.href);
+if(u.hostname.indexOf("play.")===0)u.searchParams.set("referrer","utm_source="+s+"&utm_medium="+m+"&utm_campaign="+c);
+else u.searchParams.set("ct",(s+"-"+m+"-"+c).slice(0,40));a.href=u.toString();});})();</script></body>
+</html>
